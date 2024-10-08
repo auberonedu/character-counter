@@ -26,10 +26,10 @@ public class CharacterFrequencyCounterTest {
     @Test
     void testGetRelativePercentageMissingCharacter() {
         // Arrange
-        CharacterFrequencyCounter percentage = new CharacterFrequencyCounter("sshh");
+        CharacterFrequencyCounter percentage = new CharacterFrequencyCounter("aaa");
         // Act
-        double actualPercentage = percentage.getRelativePercentage('a');
+        double actualPercentage = percentage.getRelativePercentage('z');
         // Assert
-        assertEquals(0, actualPercentage);
+        assertEquals(0.0, actualPercentage, .001);
     }
 }
