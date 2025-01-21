@@ -60,8 +60,16 @@ public class CharacterFrequencyCounter {
      */
     public double getRelativePercentage(char c) {
         c = Character.toLowerCase(c);
-        int charCount = frequencyMap.get(c);
+        int charCount = 0;
+        if(     frequencyMap.get(c) != null  ){
+             charCount = frequencyMap.get(c);
 
+        }
         return ((double) charCount / totalCharacterCount) * 100;
+    }
+
+    public int getFrequency(String string) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getFrequency'");
     }
 }
